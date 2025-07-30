@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Position Examples</title>
+  <style>
+    body {
+      height: 2000px; /* So you can scroll */
+      padding: 20px;
+      font-family: Arial;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      color: white;
+      padding: 10px;
+      margin: 20px 0;
+    }
+
+    .static {
+      background-color: gray;
+      position: static;
+    }
+
+    .relative {
+      background-color: green;
+      position: relative;
+      left: 50px;
+      top: 20px;
+    }
+
+    .absolute-container {
+      position: relative;
+      height: 150px;
+      background: #f0f0f0;
+    }
+
+    .absolute {
+      background-color: red;
+      position: absolute;
+      top: 10px;
+      left: 100px;
+    }
+
+    .fixed {
+      background-color: blue;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+
+    .sticky {
+      background-color: orange;
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box static">Static (default)</div>
+
+  <div class="box relative">Relative (moved 50px right, 20px down)</div>
+
+  <div class="absolute-container">
+    <div class="box absolute">Absolute (inside a relative parent)</div>
+  </div>
+
+  <div class="box fixed">Fixed (sticks to top-right of screen)</div>
+
+  <div class="box sticky">Sticky (sticks to top when you scroll)</div>
+
+  <p>Scroll down the page to see how the sticky and fixed elements behave!</p>
+
+</body>
+</html>
